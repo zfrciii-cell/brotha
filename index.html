@@ -34,6 +34,16 @@
   <canvas id="particles"></canvas>
 </div>
 
+<!-- SOUND TOGGLE -->
+<button class="sound-toggle" id="soundToggle" title="Toggle ambient sound">
+  <span class="sound-icon sound-off">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+  </span>
+  <span class="sound-icon sound-on" style="display:none">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></svg>
+  </span>
+</button>
+
 <!-- ACCENT PICKER -->
 <div class="accent-picker" id="accentPicker">
   <span class="accent-label">accent</span>
@@ -49,47 +59,65 @@
 <nav id="navbar">
   <div class="logo">BROTHA</div>
   <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#testimonials">Reviews</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#home" data-i18n="nav_home">Home</a></li>
+    <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+    <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+    <li><a href="#testimonials" data-i18n="nav_reviews">Reviews</a></li>
+    <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
   </ul>
-  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <div class="nav-right-mobile">
+    <div class="lang-switcher" id="langSwitcher">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="uz">UZ</button>
+      <button class="lang-btn" data-lang="ru">RU</button>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
   <ul>
-    <li><a href="#home" class="mob-a">Home</a></li>
-    <li><a href="#skills" class="mob-a">Skills</a></li>
-    <li><a href="#projects" class="mob-a">Projects</a></li>
-    <li><a href="#testimonials" class="mob-a">Reviews</a></li>
-    <li><a href="#contact" class="mob-a">Contact</a></li>
+    <li><a href="#home" class="mob-a" data-i18n="nav_home">Home</a></li>
+    <li><a href="#skills" class="mob-a" data-i18n="nav_skills">Skills</a></li>
+    <li><a href="#projects" class="mob-a" data-i18n="nav_projects">Projects</a></li>
+    <li><a href="#testimonials" class="mob-a" data-i18n="nav_reviews">Reviews</a></li>
+    <li><a href="#contact" class="mob-a" data-i18n="nav_contact">Contact</a></li>
   </ul>
+  <div class="mob-sound-wrap">
+    <button class="mob-sound-btn" id="mobSoundToggle" title="Toggle ambient sound">
+      <span class="sound-icon sound-off">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+      </span>
+      <span class="sound-icon sound-on" style="display:none">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></svg>
+      </span>
+      <span class="mob-sound-label">Ambient Sound</span>
+    </button>
+  </div>
 </div>
 
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-left">
-    <div class="badge">✦ Available for work</div>
+    <div class="badge" data-i18n="badge">✦ Available for work</div>
     <div class="hero-title-wrap">
-      <p class="hello">Hello, I'm</p>
+      <p class="hello" data-i18n="hello">Hello, I'm</p>
       <h1 class="hero-name">Brotha</h1>
       <div class="typing-line">
-        <span class="i-am">I'm a </span><span class="typed-text" id="typingText"></span><span class="cursor-blink">|</span>
+        <span class="i-am" data-i18n="i_am">I'm a </span><span class="typed-text" id="typingText"></span><span class="cursor-blink">|</span>
       </div>
     </div>
-    <p class="desc">I craft modern neon-style websites with buttery-smooth animations, premium UI and unforgettable user experiences.</p>
+    <p class="desc" data-i18n="desc">I craft modern neon-style websites with buttery-smooth animations, premium UI and unforgettable user experiences.</p>
     <div class="buttons">
-      <button class="btn1" id="viewProjectsBtn"><span>View Projects</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-      <button class="btn2" id="contactBtn">Contact Me</button>
+      <button class="btn1" id="viewProjectsBtn"><span data-i18n="btn_projects">View Projects</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      <button class="btn2" id="contactBtn" data-i18n="btn_contact">Contact Me</button>
     </div>
     <div class="stats-row">
-      <div class="stat"><span class="stat-n">3+</span><span class="stat-l">Years Exp</span></div>
+      <div class="stat"><span class="stat-n">3+</span><span class="stat-l" data-i18n="stat_exp">Years Exp</span></div>
       <div class="stat-divider"></div>
-      <div class="stat"><span class="stat-n">50+</span><span class="stat-l">Projects</span></div>
+      <div class="stat"><span class="stat-n">50+</span><span class="stat-l" data-i18n="stat_projects">Projects</span></div>
       <div class="stat-divider"></div>
-      <div class="stat"><span class="stat-n">100%</span><span class="stat-l">Satisfaction</span></div>
+      <div class="stat"><span class="stat-n">100%</span><span class="stat-l" data-i18n="stat_satisfaction">Satisfaction</span></div>
     </div>
   </div>
 
@@ -104,7 +132,7 @@
       <h2>Brotha</h2>
       <p class="card-role">Frontend Developer</p>
       <div class="card-tags">
-        <span>React</span><span>CSS</span><span>JS</span><span>HTML</span><span>Python</span>
+        <span>React</span><span>CSS</span><span>JS</span><span>HTML</span>
       </div>
       <div class="socials">
         <a href="https://instagram.com" target="_blank" title="Instagram">
@@ -132,7 +160,7 @@
 
 <!-- SKILLS -->
 <section id="skills" class="skills-section">
-  <h2 class="section-title reveal">My <span class="gradient">Skills</span></h2>
+  <h2 class="section-title reveal">My <span class="gradient" data-i18n="skills_title">Skills</span></h2>
   <div class="skills-grid">
 
     <!-- HTML/CSS -->
@@ -226,7 +254,7 @@
 
 <!-- PROJECTS -->
 <section id="projects" class="projects-section">
-  <h2 class="section-title reveal">My <span class="gradient">Projects</span></h2>
+  <h2 class="section-title reveal">My <span class="gradient" data-i18n="projects_title">Projects</span></h2>
   <div class="projects-grid">
     <div class="project-card reveal">
       <div class="project-num">01</div>
@@ -254,7 +282,7 @@
 
 <!-- TESTIMONIALS -->
 <section id="testimonials" class="testimonials-section">
-  <h2 class="section-title reveal">What People <span class="gradient">Say</span></h2>
+  <h2 class="section-title reveal">What People <span class="gradient" data-i18n="reviews_title">Say</span></h2>
   <div class="testimonials-grid">
     <div class="testimonial-card reveal"><div class="stars">★★★★★</div><p class="review-text">"Brotha built our company website in record time. The animations and design blew our whole team away!"</p><div class="reviewer"><div class="reviewer-avatar">AK</div><div><div class="reviewer-name">Akbar Karimov</div><div class="reviewer-role">CEO, TechStart UZ</div></div></div></div>
     <div class="testimonial-card reveal"><div class="stars">★★★★★</div><p class="review-text">"Incredible attention to detail. Every hover effect, every transition was perfectly crafted."</p><div class="reviewer"><div class="reviewer-avatar">SN</div><div><div class="reviewer-name">Sara Nazarova</div><div class="reviewer-role">Product Manager</div></div></div></div>
@@ -293,11 +321,50 @@
 
 <!-- CONTACT -->
 <section id="contact" class="contact-section">
-  <h2 class="section-title reveal">Let's <span class="gradient">Work Together</span></h2>
-  <div class="contact-box reveal">
-    <div class="contact-glow"></div>
-    <p class="contact-sub">Have a project in mind? I'd love to hear about it.</p>
-    <a href="mailto:your@email.com" class="btn1"><span>Send Email</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  <h2 class="section-title reveal">Let's <span class="gradient" data-i18n="contact_title">Work Together</span></h2>
+  <p class="contact-lead reveal" data-i18n="contact_lead">Have a project in mind? Drop me a message — I reply within 24 hours.</p>
+  <div class="contact-wrap reveal">
+    <div class="contact-info">
+      <div class="contact-glow"></div>
+      <div class="c-info-item">
+        <span class="c-info-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+        <span>your@email.com</span>
+      </div>
+      <div class="c-info-item">
+        <span class="c-info-icon"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg></span>
+        <span>t.me/yourusername</span>
+      </div>
+      <div class="c-info-item">
+        <span class="c-info-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <span>Tashkent, Uzbekistan</span>
+      </div>
+      <div class="c-availability"><span class="c-dot"></span> Available for new projects</div>
+    </div>
+    <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+      <div class="contact-glow"></div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Your name</label>
+          <input class="form-input" type="text" id="fname" placeholder="Asilbek Karimov" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email address</label>
+          <input class="form-input" type="email" id="femail" placeholder="you@example.com" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Subject</label>
+        <input class="form-input" type="text" id="fsubject" placeholder="Project inquiry...">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea class="form-input form-textarea" id="fmessage" placeholder="Tell me about your project..." required></textarea>
+      </div>
+      <button class="btn1 form-submit" type="submit">
+        <span>Send Message</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </form>
   </div>
 </section>
 
